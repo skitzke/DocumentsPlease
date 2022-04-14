@@ -26,6 +26,7 @@
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/canvas.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/circle.js')}}"></script>
 </html>
 
 
