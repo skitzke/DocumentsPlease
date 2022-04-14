@@ -18,10 +18,10 @@
             <div id="caption"></div>
         </div>
 
-        <img id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">
-        <img id="rulebookOpen" src="{{asset('images/RulesInnerBasic.png')}}" alt="rulebook basics">
-        <img id="approveStamp" src="{{asset('images/StampBotApproved.png')}}" alt="approve stamp">
-        <img id="denyStamp" src="{{asset('images/StampBotDenied.png')}}" alt="deny stamp">
+        <img class="image" id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">
+        <img class="image" id="rulebookOpen" src="{{asset('images/RulesInnerBasic.png')}}" alt="rulebook basics">
+        <img class="image" id="approveStamp" src="{{asset('images/StampBotApproved.png')}}" alt="approve stamp">
+        <img class="image" id="denyStamp" src="{{asset('images/StampBotDenied.png')}}" alt="deny stamp">
         </div>
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>

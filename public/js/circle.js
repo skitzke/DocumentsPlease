@@ -20,7 +20,6 @@ class Circle{
     mousePosCalculation(xMouse,yMouse){
         return Math.sqrt(( ( xMouse - this.xpoint ) * ( xMouse - this.xpoint ) ) + ( ( yMouse - this.ypoint ) * ( yMouse - this.ypoint )));
     }
-
     rulebookOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
@@ -30,11 +29,13 @@ class Circle{
             return false;
         }
     }
+
     approveStampOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = true;
             console.log(decision);
+            imgRandom();
             return true;
         }else{
             return false;
@@ -45,12 +46,12 @@ class Circle{
         if(distance < this.radius){
             decision = false;
             console.log(decision);
+            imgRandom();
             return true;
         }else{
             return false;
         }
     }
-
     showModal(){
         modal.style.display = "block";
         modalImg.src="images/RulesInnerBasic.png";
