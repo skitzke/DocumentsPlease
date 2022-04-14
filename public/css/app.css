@@ -10,9 +10,7 @@ canvas{
     background-image: url("../images/Background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0;
     margin: auto;
-    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
