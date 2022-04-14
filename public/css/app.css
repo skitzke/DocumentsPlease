@@ -4,44 +4,34 @@
 }
 body {
     background-color: #2d3748;
-    height:100%
 }
-.container{
-    margin: 0 auto;
-    width: 90%;
-    position: relative;
-}
-#game{
+/* Game Window style, size and position */
+canvas{
     background-image: url("../images/Background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: inherit;
-    width: 100%;
-    height: 100vh;
-    position: relative;
-}
-#rulebook {
+    padding: 0;
+    margin: auto;
+    display: block;
     position: absolute;
-    width: 5%;
-    left: 55vw;
-    bottom: 2vh;
-    cursor: pointer;
-    transition: 0.3s;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid black 5px;
+}
+/* images style */
+#rulebook {
+    display: none;
 }
 #rulebookOpen{
     display: none;
 }
 #approveStamp{
-    position: absolute;
-    width: 4%;
-    bottom: 1vh;
-    left: 27vw;
+    display: none;
 }
 #denyStamp{
-    position: absolute;
-    width: 4%;
-    bottom: 1vh;
-    left: 32vw;
+    display: none;
 }
 
 /* The Modal (background) */

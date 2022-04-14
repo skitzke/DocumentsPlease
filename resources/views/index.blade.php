@@ -9,22 +9,23 @@
         <title>Documents please</title>
     </head>
     <body>
-    <div class="container">
-        <div id="game">
-            <div id="myModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
-                <div id="caption"></div>
-            </div>
+        <div class="container">
+        <canvas id="canvas"></canvas>
 
-            <img id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">
-            <img id="approveStamp" src="{{asset('images/StampBotApproved.png')}}" alt="approve stamp">
-            <img id="denyStamp" src="{{asset('images/StampBotDenied.png')}}" alt="deny stamp">
-            <img id="rulebookOpen" src="{{asset('images/RulesInnerBasic.png')}}" alt="rulebook basics">
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
         </div>
-    </div>
+
+        <img id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">
+        <img id="rulebookOpen" src="{{asset('images/RulesInnerBasic.png')}}" alt="rulebook basics">
+        <img id="approveStamp" src="{{asset('images/StampBotApproved.png')}}" alt="approve stamp">
+        <img id="denyStamp" src="{{asset('images/StampBotDenied.png')}}" alt="deny stamp">
+        </div>
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/canvas.js')}}"></script>
 </html>
 
 
