@@ -18,6 +18,14 @@ var rulebookImg = document.getElementById("rulebook")
 var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
+var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
+
+function imgRandom() {
+    var rand = people[Math.floor(Math.random() * people.length)];
+    var image = new Image();
+    image.src = rand;
+    context.drawImage(image, 615, 290, 200, 180);
+}
 
 // Modal var
 var modal = document.getElementById("myModal");
