@@ -24,16 +24,23 @@ var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
+
+//This loads the first image when the page is loaded
 image.src = people[1];
 image.onload = function (){
-    context.drawImage(image, 615, 290, 200, 180);
+    setTimeout(function (){
+        context.drawImage(image, 615, 290, 200, 180);
+    }, 800);
 }
 
+//Deals with only loading the images when the approve or deny buttons are pressed
 function imgRandom() {
     let rand = people[Math.floor(Math.random() * people.length)];
     image = new Image();
     image.src = rand;
-    context.drawImage(image, 615, 290, 200, 180);
+    setTimeout(function (){
+        context.drawImage(image, 615, 290, 200, 180);
+    }, 800);
 }
 
 // Modal var
