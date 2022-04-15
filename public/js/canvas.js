@@ -1,3 +1,6 @@
+window.addEventListener('load', function() {
+    displayCurrentDate();
+})
 // Global decision variable
 let decision = false;
 
@@ -5,6 +8,7 @@ let decision = false;
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
 let image = new Image();
+let today = new Date();
 
 // Define canvas size
 var window_height = 720;
@@ -59,7 +63,7 @@ function drawImage(img, x ,y, w, h) {
 //Access local storage to print the username. If storage is empty, display Guest**** name tag
 function drawNameTag(){
     context.font="small-caps 18px Arial";
-    context.fillStyle = "#1c0400";
+    context.fillStyle = "#422a1e";
     context.textAlign = "center";
     if(retrieveUsername() != null){
         context.fillText(retrieveUsername(), 1195, 692, 130);
@@ -73,6 +77,17 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Method to display current date without time
+function displayCurrentDate(){
+    context.font="bold 16px Arial";
+    context.fillStyle = "#422a1e";
+    context.textAlign = "center";
+    var d = today.getDate();
+    var n = today.getMonth()+1;
+    var y = today.getFullYear();
+    context.fillText((d + "." + n + "." + y), 564, 716, 100);
 }
 
 //Draw name tag
