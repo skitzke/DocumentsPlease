@@ -62,17 +62,16 @@ var captionTextRulebook = document.getElementById("caption");
 var modalImg = document.getElementById("img01");
 var modalImg2 = document.getElementById("img02");
 
-// Get the <span> element that closes the modal
-var spanRulebook = document.getElementsByClassName("close")[0];
-var spanPassport = document.getElementsByClassName("close2")[0];
-
-// When the user clicks on <span> (x), close the modal
-spanRulebook.onclick = function() {
-    modalRulebook.style.display = "none";
-}
-// When the user clicks on <span> (x), close the modal
-spanPassport.onclick = function() {
-    modalPassport.style.display = "none";
+function rulebbookPassportBackgroundExit(){
+    //When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target === modalPassport) {
+            modalPassport.style.display = "none";
+        }
+        else if (event.target === modalRulebook){
+            modalRulebook.style.display = "none";
+        }
+    }
 }
 
 //Draw img method
@@ -116,6 +115,8 @@ function displayCurrentDate(){
 
 //Draw name tag
 drawNameTag();
+
+rulebbookPassportBackgroundExit();
 
 // Draw image
 drawImage(rulebookImage,785, 635, 60, 70);

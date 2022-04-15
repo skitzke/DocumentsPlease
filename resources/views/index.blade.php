@@ -13,12 +13,10 @@
         <canvas id="canvas"></canvas>
 
         <div id="myModalRulebook" class="modal">
-            <span id="closeSpan" class="close">&times;</span>
             <img class="modal-content" id="img01">
             <div id="caption"></div>
         </div>
             <div id="myModalPassport" class="modal">
-            <span id="closeSpan" class="close2">&times;</span>
             <img class="modal-content" id="img02">
         </div>
 
