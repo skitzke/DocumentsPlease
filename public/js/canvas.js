@@ -1,6 +1,3 @@
-window.addEventListener('load', function() {
-    displayCurrentDate();
-})
 // Global decision variable
 let decision = false;
 
@@ -31,6 +28,8 @@ image.onload = function (){
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
     }, 800);
+    displayCurrentDate();
+    drawNameTag();
 }
 
 //Deals with only loading the images when the approve or deny buttons are pressed
@@ -75,7 +74,7 @@ function drawNameTag(){
     if(retrieveUsername() != null){
         context.fillText(retrieveUsername(), 1195, 692, 130);
     }else{
-        context.fillText("Guest" + getRandomInt(0,9999), 1195, 692, 130);
+        context.fillText("Guest", 1195, 692, 130);
     }
 }
 
