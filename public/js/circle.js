@@ -34,9 +34,10 @@ class Circle{
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = true;
+            if (decision === true){
+                return reDraw();
+            }
             console.log(decision);
-            reDraw();
-            return true;
         }else{
             return false;
         }
@@ -45,9 +46,10 @@ class Circle{
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = false;
+            if (decision === false){
+                return reDraw();
+            }
             console.log(decision);
-            reDraw();
-            return true;
         }else{
             return false;
         }
@@ -88,4 +90,6 @@ function reDraw(){
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
     imgRandom();
+    displayCurrentDate();
+    drawNameTag();
 }
