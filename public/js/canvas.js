@@ -21,6 +21,7 @@ var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
+var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png','PassportInnerAntegria5.png','PassportInnerAntegria6.png','images/PassportInnerAntegria7.png.png'];
 
 //This loads the first image when the page is loaded
 image.src = people[1];
@@ -103,6 +104,7 @@ drawNameTag();
 drawImage(rulebookImage,785, 635, 60, 70);
 drawImage(approveStamp, 370, 660, 50, 50);
 drawImage(denyStamp, 450, 660, 50, 50);
+
 
 
 
