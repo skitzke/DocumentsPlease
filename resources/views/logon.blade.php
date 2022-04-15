@@ -9,6 +9,22 @@
         <title>Documents please Menu</title>
     </head>
     <body>
+    <audio id="divAudio">
+        <source src="audio/menusong.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        document.addEventListener('click', musicPlay);
+        var vAudio = document.getElementById("divAudio");
+        var hasInit = false;
+        function playMusic()
+        {
+            if(!hasInit)
+            {
+                hasInit = true;
+                vAudio.play();
+            }
+        }
+    </script>
         <div class="container">
             <canvas id="menuBackground"></canvas>
             <div class="login-page">

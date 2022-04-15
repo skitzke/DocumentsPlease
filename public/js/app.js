@@ -1,6 +1,7 @@
 var username;
 var usernameStorage;
 var element = document.getElementById('userInput');
+var menuMustic = new Audio('audio/menusong.mp3');
 
 // Store username variable in the local storage
 function storeUsername(){
@@ -21,3 +22,9 @@ function retrieveUsername(){
 function cleanLocalStorage(){
     localStorage.removeItem("username");
 }
+
+function playMusic(){
+    menuMustic.play();
+    menuMustic.loop = true;
+}
+playMusic();

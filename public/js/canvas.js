@@ -29,6 +29,7 @@ image.src = people[1];
 image.onload = function (){
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
+        passportTimer();
     }, 800);
     displayCurrentDate();
     drawNameTag();
@@ -41,7 +42,15 @@ function imgRandom() {
     image.src = rand;
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
-    }, 800);
+    }, 700);
+}
+
+function passportTimer(){
+    let passport = new Image();
+    passport.src = passportImg;
+    setTimeout(function (){
+        context.drawImage(passport, 700, 520, 50, 70);
+    }, 750);
 }
 
 // Modal var
@@ -112,7 +121,7 @@ drawNameTag();
 drawImage(rulebookImage,785, 635, 60, 70);
 drawImage(approveStamp, 370, 660, 50, 50);
 drawImage(denyStamp, 450, 660, 50, 50);
-drawImage(passportImg, 700, 520, 50, 70);
+// drawImage(passportImg, 700, 520, 50, 70);
 
 
 

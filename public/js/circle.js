@@ -103,8 +103,8 @@ function reDraw(){
     drawImage(rulebookImage,785, 635, 60, 70);
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
-    drawImage(passportImg, 700, 520, 50, 70);
     imgRandom();
     displayCurrentDate();
     drawNameTag();
+    passportTimer();
 }
