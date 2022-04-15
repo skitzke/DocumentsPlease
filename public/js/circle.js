@@ -64,12 +64,11 @@ class Circle{
     showRulebook(){
         modalRulebook.style.display = "block";
         modalImg.src="images/RulesInnerBasic.png";
-        captionText.innerHTML = rulebookImg.alt;
+        captionTextRulebook.innerHTML = rulebookImg.alt;
     }
     showPassport(){
         modalPassport.style.display = "block";
         modalImg2.src="images/PassportInnerAntegria7.png";
-        captionText.innerHTML = passportImg.alt;
     }
 } // Circle class end
 

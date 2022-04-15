@@ -13,14 +13,13 @@
         <canvas id="canvas"></canvas>
 
         <div id="myModalRulebook" class="modal">
-            <span id="passportSpan" class="close">&times;</span>
+            <span id="closeSpan" class="close">&times;</span>
             <img class="modal-content" id="img01">
             <div id="caption"></div>
         </div>
             <div id="myModalPassport" class="modal">
-            <span id="passportSpan" class="close2">&times;</span>
+            <span id="closeSpan" class="close2">&times;</span>
             <img class="modal-content" id="img02">
-            <div id="caption"></div>
         </div>
 
         <img class="image" id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">

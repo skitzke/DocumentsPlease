@@ -82,7 +82,7 @@ canvas{
 }
 
 /* The Close Button */
-#passportSpan {
+#closeSpan {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -92,8 +92,8 @@ canvas{
     transition: 0.3s;
 }
 
-#passportSpan:hover,
-#passportSpan:focus {
+#closeSpan:hover,
+#closeSpan:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;

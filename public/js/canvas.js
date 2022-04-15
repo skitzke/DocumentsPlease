@@ -49,20 +49,20 @@ var modalRulebook = document.getElementById("myModalRulebook");
 var modalPassport = document.getElementById("myModalPassport");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var captionText = document.getElementById("caption");
+var captionTextRulebook = document.getElementById("caption");
 var modalImg = document.getElementById("img01");
 var modalImg2 = document.getElementById("img02");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-var span2 = document.getElementsByClassName("close2")[0];
+var spanRulebook = document.getElementsByClassName("close")[0];
+var spanPassport = document.getElementsByClassName("close2")[0];
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+spanRulebook.onclick = function() {
     modalRulebook.style.display = "none";
 }
 // When the user clicks on <span> (x), close the modal
-span2.onclick = function() {
+spanPassport.onclick = function() {
     modalPassport.style.display = "none";
 }
 
