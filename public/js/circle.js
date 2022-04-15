@@ -35,7 +35,7 @@ class Circle{
         if(distance < this.radius){
             decision = true;
             console.log(decision);
-            imgRandom();
+            reDraw();
             return true;
         }else{
             return false;
@@ -46,7 +46,7 @@ class Circle{
         if(distance < this.radius){
             decision = false;
             console.log(decision);
-            imgRandom();
+            reDraw();
             return true;
         }else{
             return false;
@@ -78,3 +78,14 @@ canvas.addEventListener('click', (event) =>{
     approveStampCircle.approveStampOnclick(x, y);
     denyStampCircle.denyStampOnclick(x, y);
 });
+
+function reDraw(){
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    rulebookCircle.drawShape(context);
+    approveStampCircle.drawShape(context);
+    denyStampCircle.drawShape(context);
+    drawImage(rulebookImage,785, 635, 60, 70);
+    drawImage(approveStamp, 370, 660, 50, 50);
+    drawImage(denyStamp, 450, 660, 50, 50);
+    imgRandom();
+}
