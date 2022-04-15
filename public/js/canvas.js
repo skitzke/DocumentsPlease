@@ -16,11 +16,12 @@ canvas.height = window_height;
 canvas.width = window_width;
 
 // Image variables
-var rulebookImg = document.getElementById("rulebook")
+var rulebookImg = document.getElementById("rulebook");
+var passportImg = document.getElementById("passport");
 var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
-var passportImg = document.getElementById("passport").getAttribute("src");
+var passports = document.getElementById("passport").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
 var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png','PassportInnerAntegria5.png','PassportInnerAntegria6.png','images/PassportInnerAntegria7.png.png'];
 
@@ -47,7 +48,7 @@ function imgRandom() {
 
 function passportTimer(){
     let passport = new Image();
-    passport.src = passportImg;
+    passport.src = passports;
     setTimeout(function (){
         context.drawImage(passport, 700, 520, 50, 70);
     }, 750);
@@ -58,7 +59,8 @@ var modalRulebook = document.getElementById("myModalRulebook");
 var modalPassport = document.getElementById("myModalPassport");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var captionTextRulebook = document.getElementById("caption");
+var captionTextRulebook = document.getElementById("captionRulebook");
+var captionTextPassport = document.getElementById("captionPassport");
 var modalImg = document.getElementById("img01");
 var modalImg2 = document.getElementById("img02");
 

@@ -69,6 +69,7 @@ class Circle{
     showPassport(){
         modalPassport.style.display = "block";
         modalImg2.src="images/PassportInnerAntegria7.png";
+        captionTextPassport.innerHTML = passportImg.alt;
     }
 } // Circle class end
 

@@ -52,15 +52,26 @@ canvas{
 }
 
 /* Caption of Modal Image */
-#caption {
+#captionRulebook {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: fit-content;
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-    height: 150px;
+    height: fit-content;
+}
+
+#captionPassport {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: fit-content;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: fit-content;
 }
 
 /* Add Animation */
