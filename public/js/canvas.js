@@ -4,6 +4,7 @@ let decision = false;
 // Instantiate Canvas Settings variables
 let canvas = document.getElementById("canvas");
 let context = canvas.getContext("2d");
+let image = new Image();
 
 // Define canvas size
 var window_height = 720;
@@ -19,10 +20,14 @@ var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
+image.src = people[1];
+image.onload = function (){
+    context.drawImage(image, 615, 290, 200, 180);
+}
 
 function imgRandom() {
-    var rand = people[Math.floor(Math.random() * people.length)];
-    var image = new Image();
+    let rand = people[Math.floor(Math.random() * people.length)];
+    image = new Image();
     image.src = rand;
     context.drawImage(image, 615, 290, 200, 180);
 }
