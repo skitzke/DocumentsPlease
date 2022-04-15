@@ -19,8 +19,50 @@ body {
     right: 0;
     border: solid black 5px;
 }
-
-#container {
+.form {
+    background: #000000;
+    padding: 30px;
+    height: 120px;
+    width: 200px;
+    margin: auto;
     position: absolute;
-    padding: 16px;
+    top: 7%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: solid black 2px;
+
 }
+.form input {
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form input[type=submit] {
+    background: #6C1A1A;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form .message {
+    text-align: center;
+    color: #b3b3b3;
+}
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+
+
+
+
+

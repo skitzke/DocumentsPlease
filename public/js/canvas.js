@@ -56,6 +56,28 @@ function drawImage(img, x ,y, w, h) {
     }
 }
 
+//Access local storage to print the username. If storage is empty, display Guest**** name tag
+function drawNameTag(){
+    context.font="small-caps 18px Arial";
+    context.fillStyle = "#1c0400";
+    context.textAlign = "center";
+    if(retrieveUsername() != null){
+        context.fillText(retrieveUsername(), 1195, 692, 130);
+    }else{
+        context.fillText("Guest" + getRandomInt(0,9999), 1195, 692, 130);
+    }
+}
+
+//Generate random int within min max range
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//Draw name tag
+drawNameTag();
+
 // Draw image
 drawImage(rulebookImage,785, 635, 60, 70);
 drawImage(approveStamp, 370, 660, 50, 50);

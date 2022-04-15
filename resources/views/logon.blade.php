@@ -11,11 +11,18 @@
     <body>
         <div class="container">
             <canvas id="menuBackground"></canvas>
-            <img id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">
+            <div class="login-page">
+                <div class="form">
+                    <form class="login-form" action="{{ route('home') }}" method="GET">
+                        <input id="userInput" type="text" name="username" placeholder="username" required/>
+                        <input onclick="storeUsername()" type="submit" value="Play">
+                        <p class="message">No username? <a href="{{route('home')}}" onclick="cleanLocalStorage()">Play as a guest</a></p>
+                    </form>
+                </div>
+            </div>
         </div>
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
-    <script type="text/javascript" src="{{URL::asset('js/canvas.js')}}"></script>
 </html>
 
 
