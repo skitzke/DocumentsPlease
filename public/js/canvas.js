@@ -20,6 +20,7 @@ var rulebookImg = document.getElementById("rulebook")
 var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
+var passportImg = document.getElementById("passport").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
 var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png','PassportInnerAntegria5.png','PassportInnerAntegria6.png','images/PassportInnerAntegria7.png.png'];
 
@@ -44,18 +45,25 @@ function imgRandom() {
 }
 
 // Modal var
-var modal = document.getElementById("myModal");
+var modalRulebook = document.getElementById("myModalRulebook");
+var modalPassport = document.getElementById("myModalPassport");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var captionText = document.getElementById("caption");
 var modalImg = document.getElementById("img01");
+var modalImg2 = document.getElementById("img02");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
-    modal.style.display = "none";
+    modalRulebook.style.display = "none";
+}
+// When the user clicks on <span> (x), close the modal
+span2.onclick = function() {
+    modalPassport.style.display = "none";
 }
 
 //Draw img method
@@ -104,6 +112,7 @@ drawNameTag();
 drawImage(rulebookImage,785, 635, 60, 70);
 drawImage(approveStamp, 370, 660, 50, 50);
 drawImage(denyStamp, 450, 660, 50, 50);
+drawImage(passportImg, 700, 520, 50, 70);
 
 
 

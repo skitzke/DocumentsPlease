@@ -19,16 +19,7 @@ canvas{
     border: solid black 5px;
 }
 /* images style */
-#rulebook {
-    display: none;
-}
-#rulebookOpen{
-    display: none;
-}
-#approveStamp{
-    display: none;
-}
-#denyStamp{
+.image{
     display: none;
 }
 
@@ -51,8 +42,13 @@ canvas{
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
     max-width: 700px;
+}
+#img01{
+    width: 30%;
+}
+#img02{
+    width: 20%;
 }
 
 /* Caption of Modal Image */
@@ -86,7 +82,7 @@ canvas{
 }
 
 /* The Close Button */
-.close {
+#passportSpan {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -96,8 +92,8 @@ canvas{
     transition: 0.3s;
 }
 
-.close:hover,
-.close:focus {
+#passportSpan:hover,
+#passportSpan:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;

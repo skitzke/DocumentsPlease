@@ -23,7 +23,7 @@ class Circle{
     rulebookOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
-            this.showModal();
+            this.showRulebook();
             return true;
         }else{
             return false;
@@ -54,10 +54,22 @@ class Circle{
             return false;
         }
     }
-    showModal(){
-        modal.style.display = "block";
+
+    passportOnclick(xMouse,yMouse){
+        const distance = this.mousePosCalculation(xMouse,yMouse);
+        if(distance < this.radius){
+            this.showPassport();
+        }
+    }
+    showRulebook(){
+        modalRulebook.style.display = "block";
         modalImg.src="images/RulesInnerBasic.png";
-        captionText.innerHTML = rulebookImg .alt;
+        captionText.innerHTML = rulebookImg.alt;
+    }
+    showPassport(){
+        modalPassport.style.display = "block";
+        modalImg2.src="images/PassportInnerAntegria7.png";
+        captionText.innerHTML = passportImg.alt;
     }
 } // Circle class end
 
@@ -65,11 +77,13 @@ class Circle{
 let rulebookCircle = new Circle(815, 670, 38, '#f56');
 let approveStampCircle = new Circle(395, 685, 32, '#f56');
 let denyStampCircle = new Circle(475, 685, 32, '#f56');
+let passportCircle = new Circle(725, 555, 38, '#f56');
 
 // Draw shape
 rulebookCircle.drawShape(context);
 approveStampCircle.drawShape(context);
 denyStampCircle.drawShape(context);
+passportCircle.drawShape(context);
 
 // Canvas event listener
 canvas.addEventListener('click', (event) =>{
@@ -79,6 +93,7 @@ canvas.addEventListener('click', (event) =>{
     rulebookCircle.rulebookOnclick(x, y);
     approveStampCircle.approveStampOnclick(x, y);
     denyStampCircle.denyStampOnclick(x, y);
+    passportCircle.passportOnclick(x,y);
 });
 
 function reDraw(){
@@ -89,6 +104,7 @@ function reDraw(){
     drawImage(rulebookImage,785, 635, 60, 70);
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
+    drawImage(passportImg, 700, 520, 50, 70);
     imgRandom();
     displayCurrentDate();
     drawNameTag();
