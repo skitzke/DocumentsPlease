@@ -35,8 +35,8 @@ class Circle{
         if(distance < this.radius){
             decision = true;
             if (decision === true){
-                textPassport.innerHTML = documentsInfo.shuffleDateOfBirth() + "<br/>" + documentsInfo.getSex() + "<br/>" + documentsInfo.getLocation() + "<br/>" + documentsInfo.shuffleExpiryDate();
-                return reDraw() + textPassport;
+                insertDocumentsInformation();
+                return reDraw() + console.log(decision);
             }
         }else{
             return false;
@@ -47,13 +47,13 @@ class Circle{
         if(distance < this.radius){
             decision = false;
             if (decision === false){
+                insertDocumentsInformation();
                 return reDraw() + console.log(decision);
             }
         }else{
             return false;
         }
     }
-
 
     showRulebook(){
         modalRulebook.style.display = "block";
@@ -64,7 +64,6 @@ class Circle{
         modalPassport.style.display = "block";
         modalImg2.src="images/PassportInnerAntegria7.png";
         captionTextPassport.innerHTML = passportImg.alt;
-
     }
     passportOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);

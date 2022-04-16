@@ -1,25 +1,21 @@
 class Documents {
     constructor() {
-        this.dateOfBirth = "1997"
+        this.dateOfBirth = "1999";
         this.sex = ["Male", "Female"];
-        this.location = ["Arstotzka", "Kirgistan", "Putinstan"];
-        this.expiryDate = "08.02.2022";
+        this.location = ["Arstotzka", "Kirgistan", "Putinstan", "Bardiboghapu", "Slandingof", "Marsaint Newthe", "Svalslone", "United Ihrain", "Keelingdan"];
+        this.expiryDate = "31.12.2029";
     }
 
-    shuffleArray(array){
-        let rand = array[Math.floor(Math.random() * array.length)];
-        return rand;
-    }
     getDateOfBirth(){
         return this.dateOfBirth;
     }
 
     getSex(){
-        return this.shuffleArray(this.sex)
+        return this.sex;
     }
 
     getLocation(){
-        return this.shuffleArray(this.location)
+        return this.location;
     }
 
     getExpiryDate(){
@@ -27,11 +23,25 @@ class Documents {
     }
 
     shuffleDateOfBirth(){
-        return this.dateOfBirth = "19" + getRandomInt(50, 99);
+        return this.dateOfBirth = getRandomInt(1,30) + "." + getRandomInt(1,12) + ".19" + getRandomInt(50,99);
+    }
+
+    shuffleSex(){
+        return this.shuffleArray(this.getSex());
+    }
+
+    shuffleLocation(){
+        return this.shuffleArray(this.getLocation())
     }
 
     shuffleExpiryDate(){
-        return this.expiryDate = "08." + getRandomInt(1,12) + ".202" + getRandomInt(0,9);
+        return this.expiryDate = getRandomInt(1,30) + "." + getRandomInt(1,12) + ".202" + getRandomInt(0,9);
+    }
+
+    //Returns a random number in the range of the array's length
+    shuffleArray(array){
+        let rand = array[Math.floor(Math.random() * array.length)];
+        return rand;
     }
 }
 let documentsInfo = new Documents();

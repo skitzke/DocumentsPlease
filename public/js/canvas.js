@@ -31,10 +31,16 @@ image.onload = function (){
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
         passportTimer();
-        textPassport.innerHTML = "1998 <br/> Male <br/> Arstotzka <br/> 12.02.2025";
+        insertDocumentsInformation();
     }, 800);
     displayCurrentDate();
     drawNameTag();
+
+}
+
+//function that creates and inserts passport information into passport
+function insertDocumentsInformation(){
+    textPassport.innerText = documentsInfo.shuffleDateOfBirth() + "\n\n" + documentsInfo.shuffleSex() + "\n\n" + documentsInfo.shuffleLocation() + "\n\n" + documentsInfo.shuffleExpiryDate();
 
 }
 

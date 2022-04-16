@@ -82,12 +82,15 @@ canvas{
     height: fit-content;
 }
 #textPassport {
-    font-size: 0.8em;
+    color: #4a5568;
+    font-family: "Courier New";
+    font-weight: bold;
+    font-size: 0.9vw;
     max-width: fit-content;
     max-height: fit-content;
     position: absolute;
-    top: 66%;
-    left: 51%;
+    top: 54.3%;
+    left: 55%;
 }
 
 /* Add Animation */
