@@ -64,8 +64,8 @@ var captionTextPassport = document.getElementById("captionPassport");
 var modalImg = document.getElementById("img01");
 var modalImg2 = document.getElementById("img02");
 
-function rulebbookPassportBackgroundExit(){
-    //When the user clicks anywhere outside of the modal, close it
+function rulebookPassportBackgroundExit(){
+    //When the user clicks anywhere outside the modal, close it
     window.onclick = function(event) {
         if (event.target === modalPassport) {
             modalPassport.style.display = "none";
@@ -118,7 +118,7 @@ function displayCurrentDate(){
 //Draw name tag
 drawNameTag();
 
-rulebbookPassportBackgroundExit();
+rulebookPassportBackgroundExit();
 
 // Draw image
 drawImage(rulebookImage,785, 635, 60, 70);
