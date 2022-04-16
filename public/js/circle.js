@@ -6,15 +6,13 @@ class Circle{
         this.radius = radius;
         this.color = color;
     }
-    // Circle shape style
+    // Circle shape size, width, color
     drawShape(context){
         context.beginPath()
         context.arc(this.xpoint, this.ypoint, this.radius, 0, Math.PI * 2, false);
         context.strokeStyle = 'black';
         context.lineWidth = 1;
         context.fillStyle = this.color;
-        //context.stroke();
-        //context.fill();
         context.closePath();
     }
     mousePosCalculation(xMouse,yMouse){
@@ -23,21 +21,17 @@ class Circle{
     rulebookOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
-            this.showRulebook();
-            return true;
+            showRulebook();
         }else{
             return false;
         }
     }
-
     approveStampOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = true;
-            if (decision === true){
-                insertDocumentsInformation();
-                return reDraw() + console.log(decision);
-            }
+            drawDocumentsInformation();
+            return reDraw() + console.log(decision);
         }else{
             return false;
         }
@@ -46,32 +40,16 @@ class Circle{
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = false;
-            if (decision === false){
-                insertDocumentsInformation();
-                return reDraw() + console.log(decision);
-            }
+            drawDocumentsInformation();
+            return reDraw() + console.log(decision);
         }else{
             return false;
         }
     }
-
-    showRulebook(){
-        modalRulebook.style.display = "block";
-        modalImg.src="images/RulesInnerBasic.png";
-        captionTextRulebook.innerHTML = rulebookImg.alt;
-    }
-    showPassport(){
-        modalPassport.style.display = "block";
-        modalImg2.src="images/PassportInnerAntegria7.png";
-        captionTextPassport.innerHTML = passportImg.alt;
-    }
     passportOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
-            decision = true;
-            if (decision === true) {
-                this.showPassport();
-            }
+            showPassport();
         }
     }
 } // Circle class end
@@ -87,28 +65,3 @@ rulebookCircle.drawShape(context);
 approveStampCircle.drawShape(context);
 denyStampCircle.drawShape(context);
 passportCircle.drawShape(context);
-
-// Canvas event listener
-canvas.addEventListener('click', (event) =>{
-    const rect = canvas.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    rulebookCircle.rulebookOnclick(x, y);
-    approveStampCircle.approveStampOnclick(x, y);
-    denyStampCircle.denyStampOnclick(x, y);
-    passportCircle.passportOnclick(x,y);
-});
-
-function reDraw(){
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    rulebookCircle.drawShape(context);
-    approveStampCircle.drawShape(context);
-    denyStampCircle.drawShape(context);
-    drawImage(rulebookImage,785, 635, 60, 70);
-    drawImage(approveStamp, 370, 660, 50, 50);
-    drawImage(denyStamp, 450, 660, 50, 50);
-    imgRandom();
-    displayCurrentDate();
-    drawNameTag();
-    passportTimer();
-}

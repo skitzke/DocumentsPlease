@@ -45,4 +45,3 @@ class Documents {
     }
 }
 let documentsInfo = new Documents();
-
