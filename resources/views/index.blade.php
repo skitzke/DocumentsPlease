@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="container">
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" onload="" onclick="gameAudio()"></canvas>
 
         <div id="myModalRulebook" class="modal">
             <img class="modal-content" id="img01">
@@ -36,6 +36,7 @@
     <script type="text/javascript" src="{{URL::asset('js/canvas.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/circle.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/documents.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/audio.js')}}"></script>
 </html>
 
 
