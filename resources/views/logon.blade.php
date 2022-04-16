@@ -9,24 +9,8 @@
         <title>Documents please Menu</title>
     </head>
     <body>
-    <audio id="divAudio">
-        <source src="audio/menusong.mp3" type="audio/mp3">
-    </audio>
-    <script>
-        document.addEventListener('click', musicPlay);
-        var vAudio = document.getElementById("divAudio");
-        var hasInit = false;
-        function playMusic()
-        {
-            if(!hasInit)
-            {
-                hasInit = true;
-                vAudio.play();
-            }
-        }
-    </script>
         <div class="container">
-            <canvas id="menuBackground"></canvas>
+            <canvas id="menuBackground" onclick="menuAudio()"></canvas>
             <div class="login-page">
                 <div class="form">
                     <form class="login-form" action="{{ route('home') }}" method="GET">
@@ -39,6 +23,7 @@
         </div>
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/audio.js')}}"></script>
 </html>
 
 
