@@ -37,7 +37,7 @@ let textPassport = document.getElementById("textPassport");
 var modalImg = document.getElementById("img01");
 var modalImg2 = document.getElementById("img02");
 
-//window onload event listener
+//Window onload event listener
 window.addEventListener("load", ()=>{
     //Draw name tag
     drawNameTag();
@@ -75,7 +75,7 @@ canvas.addEventListener('click', (event) =>{
     passportCircle.passportOnclick(x,y);
 });
 
-//function that creates and inserts passport information into passport
+//Function that creates and inserts passport information into passport
 function drawDocumentsInformation(){
     textPassport.innerText = documentsInfo.shuffleDateOfBirth() + "\n\n" + documentsInfo.shuffleSex() + "\n\n" + documentsInfo.shuffleLocation() + "\n\n" + documentsInfo.shuffleExpiryDate();
 }
@@ -152,7 +152,7 @@ function rulebookPassportBackgroundExit(){
     }
 }
 
-// Method to display current date without time
+//Method to display current date without time
 function displayCurrentDate(){
     context.font="bold 16px Arial";
     context.fillStyle = "#422a1e";
@@ -163,7 +163,7 @@ function displayCurrentDate(){
     context.fillText((d + "." + n + "." + y), 564, 716, 100);
 }
 
-// Clears Canvas and redraws all the elements
+//Clears Canvas and redraws all the elements
 function reDraw(){
     context.clearRect(0, 0, canvas.width, canvas.height);
     rulebookCircle.drawShape(context);
