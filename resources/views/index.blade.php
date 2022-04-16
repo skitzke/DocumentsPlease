@@ -17,8 +17,11 @@
             <div id="captionRulebook"></div>
         </div>
             <div id="myModalPassport" class="modal">
-            <img class="modal-content" id="img02">
-            <div id="textPassport">asdsada</div>
+            <div id="modalImgContainer">
+                <img class="modal-content" id="img02">
+                <div id="textPassport"></div>
+            </div>
+
             <div id="captionPassport"></div>
         </div>
 
@@ -32,6 +35,7 @@
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/canvas.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/circle.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/documents.js')}}"></script>
 </html>
 
 

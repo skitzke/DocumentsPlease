@@ -31,9 +31,11 @@ image.onload = function (){
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
         passportTimer();
+        textPassport.innerHTML = "1998 <br/> Male <br/> Arstotzka <br/> 12.02.2025";
     }, 800);
     displayCurrentDate();
     drawNameTag();
+
 }
 
 //Deals with only loading the images when the approve or deny buttons are pressed
@@ -125,29 +127,4 @@ rulebookPassportBackgroundExit();
 drawImage(rulebookImage,785, 635, 60, 70);
 drawImage(approveStamp, 370, 660, 50, 50);
 drawImage(denyStamp, 450, 660, 50, 50);
-// drawImage(passportImg, 700, 520, 50, 70);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

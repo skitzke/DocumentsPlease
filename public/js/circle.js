@@ -35,7 +35,8 @@ class Circle{
         if(distance < this.radius){
             decision = true;
             if (decision === true){
-                return reDraw() + console.log(decision);
+                textPassport.innerHTML = documentsInfo.shuffleDateOfBirth() + "<br/>" + documentsInfo.getSex() + "<br/>" + documentsInfo.getLocation() + "<br/>" + documentsInfo.shuffleExpiryDate();
+                return reDraw() + textPassport;
             }
         }else{
             return false;
@@ -63,8 +64,7 @@ class Circle{
         modalPassport.style.display = "block";
         modalImg2.src="images/PassportInnerAntegria7.png";
         captionTextPassport.innerHTML = passportImg.alt;
-        textPassport.innerHTML = "WOOOOOOORKS";
-        addTextToImage("it works");
+
     }
     passportOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
@@ -112,13 +112,4 @@ function reDraw(){
     displayCurrentDate();
     drawNameTag();
     passportTimer();
-}
-
-function addTextToImage(text) {
-    // Draw Image function
-    context.lineWidth = 1;
-    context.fillStyle = "#CC00FF";
-    context.lineStyle = "#ffff00";
-    context.font = "18px sans-serif";
-    context.fillText(text, 650, 250);
 }

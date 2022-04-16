@@ -44,11 +44,19 @@ canvas{
     display: block;
     max-width: 700px;
 }
+#modalImgContainer{
+    width: 25%;
+    position: relative;
+    margin: auto;
+}
 #img01{
     width: 30%;
 }
-#img02, #textPassport{
-    width: 20%;
+#img02{
+    width: 100%;
+}
+#textPassport{
+    width: 100%;
 }
 
 /* Caption of Modal Image */
@@ -73,18 +81,13 @@ canvas{
     padding: 10px 0;
     height: fit-content;
 }
-
 #textPassport {
-    margin: auto;
-    display: block;
-    width: 80%;
+    font-size: 0.8em;
     max-width: fit-content;
-    text-align: center;
-    padding: 10px 0;
-    height: fit-content;
+    max-height: fit-content;
     position: absolute;
-    top: 31%;
-    left: 52%;
+    top: 66%;
+    left: 51%;
 }
 
 /* Add Animation */
