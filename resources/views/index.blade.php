@@ -18,7 +18,8 @@
         </div>
             <div id="myModalPassport" class="modal">
             <img class="modal-content" id="img02">
-                <div id="captionPassport"></div>
+            <div id="textPassport">asdsada</div>
+            <div id="captionPassport"></div>
         </div>
 
         <img class="image" id="rulebook" src="{{asset('images/RuleBook.png')}}" alt="rulebook">

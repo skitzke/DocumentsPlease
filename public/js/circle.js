@@ -35,9 +35,8 @@ class Circle{
         if(distance < this.radius){
             decision = true;
             if (decision === true){
-                return reDraw();
+                return reDraw() + console.log(decision);
             }
-            console.log(decision);
         }else{
             return false;
         }
@@ -47,20 +46,14 @@ class Circle{
         if(distance < this.radius){
             decision = false;
             if (decision === false){
-                return reDraw();
+                return reDraw() + console.log(decision);
             }
-            console.log(decision);
         }else{
             return false;
         }
     }
 
-    passportOnclick(xMouse,yMouse){
-        const distance = this.mousePosCalculation(xMouse,yMouse);
-        if(distance < this.radius){
-            this.showPassport();
-        }
-    }
+
     showRulebook(){
         modalRulebook.style.display = "block";
         modalImg.src="images/RulesInnerBasic.png";
@@ -70,6 +63,17 @@ class Circle{
         modalPassport.style.display = "block";
         modalImg2.src="images/PassportInnerAntegria7.png";
         captionTextPassport.innerHTML = passportImg.alt;
+        textPassport.innerHTML = "WOOOOOOORKS";
+        addTextToImage("it works");
+    }
+    passportOnclick(xMouse,yMouse){
+        const distance = this.mousePosCalculation(xMouse,yMouse);
+        if(distance < this.radius){
+            decision = true;
+            if (decision === true) {
+                this.showPassport();
+            }
+        }
     }
 } // Circle class end
 
@@ -108,4 +112,13 @@ function reDraw(){
     displayCurrentDate();
     drawNameTag();
     passportTimer();
+}
+
+function addTextToImage(text) {
+    // Draw Image function
+    context.lineWidth = 1;
+    context.fillStyle = "#CC00FF";
+    context.lineStyle = "#ffff00";
+    context.font = "18px sans-serif";
+    context.fillText(text, 650, 250);
 }
