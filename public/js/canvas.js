@@ -46,6 +46,8 @@ var modalImg2 = document.getElementById("img02");
 
 //Window onload event listener
 window.addEventListener("load", ()=>{
+    //Display start message to the user
+    startMessage();
     //Draw name tag
     drawNameTag();
 
@@ -57,7 +59,8 @@ window.addEventListener("load", ()=>{
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
     drawImage(leverDownImg, 786, 250, 50, 50);
-    drawImage(arrowImg, 850, 250, 70, 70);
+    drawImage(arrowImg, 850, 250, 60, 60);
+
     //Draw documents information
     drawDocumentsInformation();
 
@@ -132,6 +135,14 @@ function drawNameTag(){
     }else{
         context.fillText("Guest", 1195, 692, 130);
     }
+}
+
+//Method that displays start message for the player
+function startMessage(){
+    context.font="Bold 20px Arial";
+    context.fillStyle = "black";
+    context.textAlign = "center";
+    context.fillText("Click on the lever to start", 1010, 285,  200);
 }
 
 //Generate random int within min max range
