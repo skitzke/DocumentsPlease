@@ -14,9 +14,19 @@
             <canvas id="menuBackground" onclick="menuAudio()"></canvas>
             <div class="login-page">
                 <div class="form">
-                    <form class="login-form" action="{{ route('home') }}" method="GET">
+                    <form enctype='multipart/form-data' class="login-form" method="GET">
                         <input id="userInput" type="text" name="username" placeholder="username" required/>
-                        <input onclick="storeUsername()" type="submit" value="Play">
+                        <input onclick="storeUsername()"name="submit" type="submit" value="Play">
+                        <?php
+                        use App\Http\Controllers\Database;
+                        if(isset($_GET["submit"])){
+                            $username = $_GET['username'];
+                            $var = new Database\ProxyInsertDatabaseController();
+                            $var->constructor($username, "yes");
+                            return redirect()->to('home')->send();
+                        }
+                        ?>
+
                         <p class="message">No username? <a href="{{route('home')}}" onclick="cleanLocalStorage()">Play as a guest</a></p>
                     </form>
                 </div>

@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="container">
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" onclick="gameAudio()"></canvas>
         <div id="playerActionStorageElement"></div>
         <div id="myModalRulebook" class="modal">
             <img class="modal-content" id="img01">

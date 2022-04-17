@@ -139,8 +139,8 @@ function drawNameTag(){
 
 //Method that displays start message for the player
 function startMessage(){
-    context.font="Bold 20px Arial";
-    context.fillStyle = "black";
+    context.font="Bold 20px Verdana";
+    context.fillStyle = "white";
     context.textAlign = "center";
     context.fillText("Click on the lever to start", 1010, 285,  200);
 }

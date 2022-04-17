@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Database;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\Console\Input\Input;
 
-class ReadDBController
+class ReadDBController extends Controller
 {
     private function selectDecisions()
     {
