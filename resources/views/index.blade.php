@@ -38,7 +38,7 @@
         <img class="image" id="arrow" src="{{asset('images/Arrow.png')}}" alt="arrow">
         </div>
     </body>
-    <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/userData.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/canvas.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/circle.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/documents.js')}}"></script>

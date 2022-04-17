@@ -33,7 +33,7 @@
             </div>
         </div>
     </body>
-    <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/userData.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/audio.js')}}"></script>
 </html>
 
