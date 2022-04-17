@@ -32,6 +32,7 @@ var passportImgTimer = document.getElementById("passport").getAttribute("src");
 var gatesImg = document.getElementById("gates").getAttribute("src");
 var leverUpImg = document.getElementById("shutterSwitchUp").getAttribute("src");
 var leverDownImg = document.getElementById("shutterSwitchDown").getAttribute("src");
+var arrowImg = document.getElementById("arrow").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
 var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png','PassportInnerAntegria5.png','PassportInnerAntegria6.png','images/PassportInnerAntegria7.png.png']
 var playerActions = [];
@@ -56,6 +57,7 @@ window.addEventListener("load", ()=>{
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
     drawImage(leverDownImg, 786, 250, 50, 50);
+    drawImage(arrowImg, 850, 250, 70, 70);
     //Draw documents information
     drawDocumentsInformation();
 

@@ -35,6 +35,7 @@
         <img class="image" id="gates" src="{{asset('images/Shutter.png')}}" alt="gates">
         <img class="image" id="shutterSwitchUp" src="{{asset('images/ShutterSwitchUp.png')}}" alt="lever">
         <img class="image" id="shutterSwitchDown" src="{{asset('images/ShutterSwitchDown.png')}}" alt="lever">
+        <img class="image" id="arrow" src="{{asset('images/Arrow.png')}}" alt="arrow">
         </div>
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>

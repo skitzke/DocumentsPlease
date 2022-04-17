@@ -29,8 +29,6 @@ class Circle{
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             showRulebook();
-            printArrayElements();
-            test();
         }else{
             return false;
         }
