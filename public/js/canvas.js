@@ -60,11 +60,6 @@ window.addEventListener("load", ()=>{
     //Draw the img in the passport
     drawPassportImgInPassport();
 
-    image.src = people[1];
-    setTimeout(function (){
-        context.drawImage(image, 615, 290, 200, 180);
-    }, 800);
-
     //When the user clicks anywhere outside the modal, close it
     rulebookPassportBackgroundExit();
 

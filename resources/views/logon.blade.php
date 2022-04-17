@@ -6,6 +6,7 @@
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="{{ URL::asset('css/login.css') }}" />
+        <link rel="icon" href="images/icon.jpg">
         <title>Documents please Menu</title>
     </head>
     <body>

@@ -1,36 +1,48 @@
+// A class made for the gates
 class Gates {
     constructor() {
         this.gatesOpen = false;
         this.leverPosition = "down";
     }
+
+    // Gets the gate boolean from the constructor
     getGatesState(){
         return this.gatesOpen;
     }
+
+    // Gets the lever position string from the constructor
     getLeverPosition(){
         return this.leverPosition;
     }
+
+    // Sets the gate state with a parameter
     setGatesState(state){
         this.gatesOpen = state;
     }
+
+    // Sets the lever position with a string parameter
     setLeverPosition(position){
         this.leverPosition = position;
     }
+
+    // A method which according to the state, either opens the gate and switches the lever up or closes the gate and switches the lever down
     changeGateStatus(){
-        if(!gates.getGatesState()){
-            gates.setGatesState(true);
-            gates.setLeverPosition("up")
+        if(!this.getGatesState()){
+            this.setGatesState(true);
+            this.setLeverPosition("up");
             reDraw();
-            console.log("Gate state: " + gates.getGatesState());
-            console.log("Lever position: " + gates.getLeverPosition());
+            console.log("Gate state: " + this.getGatesState());
+            console.log("Lever position: " + this.getLeverPosition());
         }else{
-            gates.setGatesState(false);
-            gates.setLeverPosition("down")
+            this.setGatesState(false);
+            this.setLeverPosition("down");
             reDrawModified();
-            imgRandom();
-            console.log("Gate state: " + gates.getGatesState());
-            console.log("Lever position: " + gates.getLeverPosition());
+            console.log("Gate state: " + this.getGatesState());
+            console.log("Lever position: " + this.getLeverPosition());
         }
     }
 }
+
+// Instantiating the class
 let gates = new Gates();
 
