@@ -28,6 +28,9 @@ var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
 var passportImgTimer = document.getElementById("passport").getAttribute("src");
+var gatesImg = document.getElementById("gates").getAttribute("src");
+var leverUpImg = document.getElementById("shutterSwitchUp").getAttribute("src");
+var leverDownImg = document.getElementById("shutterSwitchDown").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
 var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png','PassportInnerAntegria5.png','PassportInnerAntegria6.png','images/PassportInnerAntegria7.png.png']
 
@@ -50,7 +53,7 @@ window.addEventListener("load", ()=>{
     drawImage(rulebookImage,785, 635, 60, 70);
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
-
+    drawImage(leverDownImg, 786, 250, 50, 50);
     //Draw documents information
     drawDocumentsInformation();
 
@@ -60,11 +63,14 @@ window.addEventListener("load", ()=>{
     image.src = people[1];
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
-        passportTimer();
     }, 800);
 
     //When the user clicks anywhere outside the modal, close it
     rulebookPassportBackgroundExit();
+
+    //Draw image behind drawn elements
+    context.globalCompositeOperation = "destination-over";
+    drawImage(gatesImg, 587, 250, 250, 220);
 });
 
 //Canvas onclick event listener
@@ -77,6 +83,7 @@ canvas.addEventListener('click', (event) =>{
     approveStampCircle.approveStampOnclick(x, y);
     denyStampCircle.denyStampOnclick(x, y);
     passportCircle.passportOnclick(x,y);
+    leverCircle.leverOnclick(x,y);
 });
 
 //Function that creates and inserts passport information into passport
@@ -172,17 +179,38 @@ function displayCurrentDate(){
     context.fillText((d + "." + n + "." + y), 564, 716, 100);
 }
 
+//Method that clears drawn canvas elements
+function clearCanvas(){
+    context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 //Clears Canvas and redraws all the elements
 function reDraw(){
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    clearCanvas();
     rulebookCircle.drawShape(context);
     approveStampCircle.drawShape(context);
     denyStampCircle.drawShape(context);
     drawImage(rulebookImage,785, 635, 60, 70);
     drawImage(approveStamp, 370, 660, 50, 50);
     drawImage(denyStamp, 450, 660, 50, 50);
+    drawImage(leverUpImg, 786, 250, 50, 50);
     imgRandom();
     displayCurrentDate();
     drawNameTag();
     passportTimer();
+}
+
+//Specific redraw method for the lever
+function reDrawModified(){
+    clearCanvas();
+    rulebookCircle.drawShape(context);
+    approveStampCircle.drawShape(context);
+    denyStampCircle.drawShape(context);
+    drawImage(rulebookImage,785, 635, 60, 70);
+    drawImage(approveStamp, 370, 660, 50, 50);
+    drawImage(denyStamp, 450, 660, 50, 50);
+    drawImage(leverDownImg, 786, 250, 50, 50);
+    drawImage(gatesImg, 587, 250, 250, 220);
+    displayCurrentDate();
+    drawNameTag();
 }

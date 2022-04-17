@@ -10,7 +10,8 @@
     </head>
     <body>
         <div class="container">
-        <canvas id="canvas" onload="" onclick="gameAudio()"></canvas>
+        <div id="demo"></div>
+        <canvas id="canvas" onclick="gameAudio()"></canvas>
 
         <div id="myModalRulebook" class="modal">
             <img class="modal-content" id="img01">
@@ -31,6 +32,9 @@
         <img class="image" id="approveStamp" src="{{asset('images/StampBotApproved.png')}}" alt="approve stamp">
         <img class="image" id="denyStamp" src="{{asset('images/StampBotDenied.png')}}" alt="deny stamp">
         <img class="image" id="passport" src="{{asset('images/passport.jpg')}}" alt="passport">
+        <img class="image" id="gates" src="{{asset('images/Shutter.png')}}" alt="gates">
+        <img class="image" id="shutterSwitchUp" src="{{asset('images/ShutterSwitchUp.png')}}" alt="lever">
+        <img class="image" id="shutterSwitchDown" src="{{asset('images/ShutterSwitchDown.png')}}" alt="lever">
         </div>
     </body>
     <script type="text/javascript" src="{{URL::asset('js/app.js')}}"></script>
@@ -38,6 +42,7 @@
     <script type="text/javascript" src="{{URL::asset('js/circle.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/documents.js')}}"></script>
     <script type="text/javascript" src="{{URL::asset('js/audio.js')}}"></script>
+    <script type="text/javascript" src="{{URL::asset('js/gates.js')}}"></script>
 </html>
 
 

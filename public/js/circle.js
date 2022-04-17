@@ -14,6 +14,8 @@ class Circle{
         context.strokeStyle = 'black';
         context.lineWidth = 1;
         context.fillStyle = this.color;
+        //context.fill();
+        //context.stroke();
         context.closePath();
     }
 
@@ -35,11 +37,11 @@ class Circle{
     // When approve stamp is clicked function
     approveStampOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
-        if(distance < this.radius){
+        if(distance < this.radius && gates.getGatesState() == true){
             decision = true;
             drawDocumentsInformation();
             drawPassportImgInPassport();
-            return reDraw() + console.log(decision);
+            return reDraw() + console.log("Approved: " + decision);
         }else{
             return false;
         }
@@ -48,11 +50,11 @@ class Circle{
     // When deny stamp is clicked function
     denyStampOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
-        if(distance < this.radius){
+        if(distance < this.radius && gates.getGatesState() == true){
             decision = false;
             drawDocumentsInformation();
             drawPassportImgInPassport();
-            return reDraw() + console.log(decision);
+            return reDraw() + console.log("Approved: " + decision);
         }else{
             return false;
         }
@@ -61,8 +63,18 @@ class Circle{
     // When passport is clicked function
     passportOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
-        if(distance < this.radius){
+        if(distance < this.radius && gates.getGatesState() == true){
             showPassport();
+        }else{
+            return false;
+        }
+    }
+    leverOnclick(xMouse,yMouse){
+        const distance = this.mousePosCalculation(xMouse,yMouse);
+        if(distance < this.radius){
+           gates.changeGateStatus();
+        }else{
+            return false
         }
     }
 } // Circle class end
@@ -72,9 +84,11 @@ let rulebookCircle = new Circle(815, 670, 38, '#f56');
 let approveStampCircle = new Circle(395, 685, 32, '#f56');
 let denyStampCircle = new Circle(475, 685, 32, '#f56');
 let passportCircle = new Circle(725, 555, 38, '#f56');
+let leverCircle = new Circle(815, 275, 35, '#f56');
 
 // Draw shape
 rulebookCircle.drawShape(context);
 approveStampCircle.drawShape(context);
 denyStampCircle.drawShape(context);
 passportCircle.drawShape(context);
+leverCircle.drawShape(context);
