@@ -5,23 +5,23 @@ let musicGame = new Audio('audio/gameBackgroundMusic.mp3');
 //Plays the menu music
 function menuAudio() {
     //Checking if the menu music is already playing
-    if (!musicMenu.paused){
+    if (!musicMenu.paused) {
         musicMenu.pause();
     }
     //If the menu music is not playing, then play the music
     musicMenu.play();
-    musicMenu.loop =true;
+    musicMenu.loop = true;
     musicMenu.volume = 0.3;
 }
 
 //Plays the game music
-function gameAudio(){
+function gameAudio() {
     //Checking if the game music is already playing
-    if (!musicGame.paused){
+    if (!musicGame.paused) {
         musicGame.pause();
     }
     //If the game music is not playing, then play the music
     musicGame.play();
-    musicGame.loop =true;
+    musicGame.loop = true;
     musicGame.volume = 0.18;
 }

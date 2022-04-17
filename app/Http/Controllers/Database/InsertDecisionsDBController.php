@@ -17,16 +17,13 @@ class InsertDecisionsDBController extends Controller
         $columnName = array('Username', 'Verified');
 
         //If the table exists insert the given parameters into the database.
-        if (Schema::hasColumns('Decision', $columnName))
-        {
+        if (Schema::hasColumns('Decision', $columnName)) {
             //Insertion query for the database.
             DB::insert('insert into Decision (Username, Verified) values (?, ?)', [$username, $decision]);
-        }
-        //If table does not exist.
-        else
-        {
+        } //If table does not exist.
+        else {
             //Create a table with the given data type and names for the columns.
-            Schema::create('Decision', function(Blueprint $table){
+            Schema::create('Decision', function (Blueprint $table) {
                 $table->bigIncrements('id');
                 $table->string('Username');
                 $table->string('Verified');
