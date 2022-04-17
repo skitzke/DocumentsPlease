@@ -24,6 +24,7 @@ var modalPassport = document.getElementById("myModalPassport");
 var rulebookImg = document.getElementById("rulebook");
 var passportImg = document.getElementById("passport");
 var imgPassport = document.getElementById("imgPassport");
+var playerActionsStorageElement = document.getElementById("playerActionStorageElement");
 var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
@@ -33,6 +34,7 @@ var leverUpImg = document.getElementById("shutterSwitchUp").getAttribute("src");
 var leverDownImg = document.getElementById("shutterSwitchDown").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png','images/person5.png','images/person6.png','images/person7.png','images/person8.png'];
 var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png','PassportInnerAntegria5.png','PassportInnerAntegria6.png','images/PassportInnerAntegria7.png.png']
+var playerActions = [];
 
 // Modal image variables
 var captionTextRulebook = document.getElementById("captionRulebook");
@@ -208,4 +210,10 @@ function reDrawModified(){
     drawImage(gatesImg, 587, 250, 250, 220);
     displayCurrentDate();
     drawNameTag();
+}
+
+function printLastUserAction(){
+    for(var i = 0; i < playerActions.length; i++){
+        playerActionsStorageElement.innerHTML = "<p>Person approved: " + playerActions[i] +  "</p>";
+    }
 }

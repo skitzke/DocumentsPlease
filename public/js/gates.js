@@ -30,12 +30,14 @@ class Gates {
         if(!this.getGatesState()){
             this.setGatesState(true);
             this.setLeverPosition("up");
+            playerActions.push(gates.getGatesState());
             reDraw();
             console.log("Gate state: " + this.getGatesState());
             console.log("Lever position: " + this.getLeverPosition());
         }else{
             this.setGatesState(false);
             this.setLeverPosition("down");
+            playerActions.push(gates.getGatesState());
             reDrawModified();
             console.log("Gate state: " + this.getGatesState());
             console.log("Lever position: " + this.getLeverPosition());
