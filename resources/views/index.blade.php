@@ -20,6 +20,7 @@
             <div id="modalImgContainer">
                 <img class="modal-content" id="img02">
                 <div id="textPassport"></div>
+                <div id="imgPassport"></div>
             </div>
 
             <div id="captionPassport"></div>

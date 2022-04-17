@@ -2,9 +2,11 @@
     margin:0;
     padding:0;
 }
+
 body {
     background-color: #2d3748;
 }
+
 /* Game Window style, size and position */
 canvas{
     background-image: url("../images/Background.jpg");
@@ -18,6 +20,7 @@ canvas{
     right: 0;
     border: solid black 5px;
 }
+
 /* images style */
 .image{
     display: none;
@@ -44,18 +47,31 @@ canvas{
     display: block;
     max-width: 700px;
 }
+
+/* A transitioning container for images */
 #modalImgContainer{
     width: 25%;
     position: relative;
     margin: auto;
 }
+
+/* Predetermination of width for img01*/
 #img01{
     width: 30%;
 }
+
+/* Predetermination of width for img02 */
 #img02{
     width: 100%;
 }
+
+/* Predetermination of width for textPassport id*/
 #textPassport{
+    width: 100%;
+}
+
+/* Starting width for imgPassport id in html */
+#imgPassport{
     width: 100%;
 }
 
@@ -71,6 +87,7 @@ canvas{
     height: fit-content;
 }
 
+/* Text for what is opened below the passport as 'passport' */
 #captionPassport {
     margin: auto;
     display: block;
@@ -81,6 +98,8 @@ canvas{
     padding: 10px 0;
     height: fit-content;
 }
+
+/* Text inside passport position */
 #textPassport {
     color: #4a5568;
     font-family: "Courier New";
@@ -93,19 +112,29 @@ canvas{
     left: 55%;
 }
 
+/* Position of the passport and gray scaling it */
+#imgPassport {
+    position: absolute;
+    top: 62%;
+    filter: grayscale(100%);
+    left: -1%;
+}
+
 /* Add Animation */
-.modal-content, #caption, #textPassport {
+.modal-content, #caption, #textPassport, #imgPassport {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
     animation-duration: 0.6s;
 }
 
+/* Transition of zooming in different browsers */
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)}
     to {-webkit-transform:scale(1)}
 }
 
+/* Transition of zoom through keyframes */
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}

@@ -6,6 +6,7 @@ class Circle{
         this.radius = radius;
         this.color = color;
     }
+
     // Circle shape size, width, color
     drawShape(context){
         context.beginPath()
@@ -15,9 +16,13 @@ class Circle{
         context.fillStyle = this.color;
         context.closePath();
     }
+
+    // To calculate the mouse position according to the drawn circles for the models
     mousePosCalculation(xMouse,yMouse){
         return Math.sqrt(( ( xMouse - this.xpoint ) * ( xMouse - this.xpoint ) ) + ( ( yMouse - this.ypoint ) * ( yMouse - this.ypoint )));
     }
+
+    // When rulebook is clicked function
     rulebookOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
@@ -26,26 +31,34 @@ class Circle{
             return false;
         }
     }
+
+    // When approve stamp is clicked function
     approveStampOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = true;
             drawDocumentsInformation();
+            drawPassportImgInPassport();
             return reDraw() + console.log(decision);
         }else{
             return false;
         }
     }
+
+    // When deny stamp is clicked function
     denyStampOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             decision = false;
             drawDocumentsInformation();
+            drawPassportImgInPassport();
             return reDraw() + console.log(decision);
         }else{
             return false;
         }
     }
+
+    // When passport is clicked function
     passportOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){

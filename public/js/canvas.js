@@ -23,6 +23,7 @@ var modalPassport = document.getElementById("myModalPassport");
 // Image variables
 var rulebookImg = document.getElementById("rulebook");
 var passportImg = document.getElementById("passport");
+var imgPassport = document.getElementById("imgPassport");
 var rulebookImage = document.getElementById("rulebook").getAttribute("src");
 var approveStamp = document.getElementById("approveStamp").getAttribute("src");
 var denyStamp = document.getElementById("denyStamp").getAttribute("src");
@@ -53,6 +54,9 @@ window.addEventListener("load", ()=>{
     //Draw documents information
     drawDocumentsInformation();
 
+    //Draw the img in the passport
+    drawPassportImgInPassport();
+
     image.src = people[1];
     setTimeout(function (){
         context.drawImage(image, 615, 290, 200, 180);
@@ -78,6 +82,11 @@ canvas.addEventListener('click', (event) =>{
 //Function that creates and inserts passport information into passport
 function drawDocumentsInformation(){
     textPassport.innerText = documentsInfo.shuffleDateOfBirth() + "\n\n" + documentsInfo.shuffleSex() + "\n\n" + documentsInfo.shuffleLocation() + "\n\n" + documentsInfo.shuffleExpiryDate();
+}
+
+//Each time approve or deny is pressed, a new passport image gets shuffled from documents.js
+function drawPassportImgInPassport(){
+    imgPassport.innerHTML = "<img src =" + documentsInfo.shufflePassportImg() + " width = 44%" + " height = 40%>";
 }
 
 //Deals with only loading the images when the approve or deny buttons are pressed
