@@ -60,7 +60,7 @@ class Documents {
 
     // Shuffles the passport images so that each image shown in the passport is different
     shufflePassportImg(){
-        return this.shuffleArray(this.passportImg);
+        return this.shuffleArray(this.getPassportImg());
     }
 }
 
