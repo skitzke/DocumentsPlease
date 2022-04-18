@@ -16,6 +16,8 @@ Use the below in terminal to open a local server from your machine by using the 
 php artisan serve
 ```
 
+When the command has been entered, click on the IP of your local server and Enjoy!
+
 ## Usage
 
 To play the game, there are two buttons, red and green. These buttons determine if the person at the counter can pass the inspection or fail it.
