@@ -4,6 +4,10 @@ A game that requires you to identify inconsistences and make a decision accordin
 
 ## Installation
 
+Before installing certain criterias need to met, they include;
+- PHP 8.0+
+- PHPStorm (Recommended)
+
 Download and extract the folder containing the game.
 Open up PHPStorm or any other IDE that can read JS/PHP/HTML/CSS all in one.
 Use the below in terminal to open a local server from your machine by using the command below.
