@@ -28,3 +28,7 @@ Even after this assignment, we will be working on it further so that the game ca
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Documents, Please UML Class Diagram
+
+![alt text](https://github.com/skitzke/DocumentsPlease/blob/main/UML%20Class%20Diagram/Design%20Patterns%20UML%20.jpeg?raw=true)
