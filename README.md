@@ -41,6 +41,15 @@ Before installing certain criterias need to met, they include;
 - PHP 8.0+
 - PHPStorm (Recommended)
 
+## <b>IMPORTANT!</b>
+
+<b>Make sure to update your .env file when you intially create it in the IDE. Then change DB_DATABASE=documentsplease</b>
+
+```bash
+DB_DATABASE=documentsplease
+```
+<b>After you've done this, open up your xampp and open phpmyadmin, add a database called docuemntsplease. When you're creating the database, it should remain empty. On the first running of the game, the tables and columns should create by itself when you first initially log.</b>
+
 Download and extract the folder containing the game.
 Open up PHPStorm or any other IDE that can read JS/PHP/HTML/CSS all in one.
 Use the below in terminal to open a local server from your machine by using the command below.
