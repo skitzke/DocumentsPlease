@@ -5,6 +5,9 @@ let context = canvas.getContext("2d");
 // Global decision variable
 let decision = false;
 
+// Player actions arr
+var playerActions = [];
+
 let image = new Image();
 let today = new Date();
 
@@ -35,7 +38,7 @@ var leverDownImg = document.getElementById("shutterSwitchDown").getAttribute("sr
 var arrowImg = document.getElementById("arrow").getAttribute("src");
 var people = ['images/person1.png', 'images/person2.png', 'images/person3.png', 'images/person4.png', 'images/person5.png', 'images/person6.png', 'images/person7.png', 'images/person8.png'];
 var documents = ['images/PassportInnerAntegria1.png', 'images/PassportInnerAntegria2.png', 'PassportInnerAntegria3.png', 'PassportInnerAntegria4.png', 'PassportInnerAntegria5.png', 'PassportInnerAntegria6.png', 'images/PassportInnerAntegria7.png.png']
-var playerActions = [];
+
 
 // Modal image variables
 var captionTextRulebook = document.getElementById("captionRulebook");

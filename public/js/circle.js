@@ -29,8 +29,6 @@ class Circle{
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             showRulebook();
-        }else{
-            return false;
         }
     }
 
@@ -44,8 +42,6 @@ class Circle{
             drawPassportImgInPassport();
             printLastUserAction();
             return reDraw() + console.log("Approved: " + decision);
-        }else{
-            return false;
         }
     }
 
@@ -59,8 +55,6 @@ class Circle{
             drawPassportImgInPassport();
             printLastUserAction();
             return reDraw() + console.log("Approved: " + decision);
-        }else{
-            return false;
         }
     }
 
@@ -69,16 +63,12 @@ class Circle{
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius && gates.getGatesState() == true){
             showPassport();
-        }else{
-            return false;
         }
     }
     leverOnclick(xMouse,yMouse){
         const distance = this.mousePosCalculation(xMouse,yMouse);
         if(distance < this.radius){
             gates.changeGateStatus();
-        }else{
-            return false
         }
     }
 } // Circle class end
